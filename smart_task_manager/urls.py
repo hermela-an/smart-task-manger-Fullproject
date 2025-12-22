@@ -48,8 +48,8 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # App APIs
-    path('api/', include('users.urls')),
-    path('api/', include('tasks.urls')),
+    path('api/users/', include('users.urls')),
+    path('api/tasks/', include('tasks.urls')),
 
     # Swagger URLs
     path('swagger/', schema_view.with_ui('swagger', cache_timeout=0), name='swagger-ui'),
