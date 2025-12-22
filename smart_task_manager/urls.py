@@ -15,6 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
+from django.http import JsonResponse
 from django.urls import path, include
 from rest_framework import permissions
 from drf_yasg.views import get_schema_view
@@ -32,8 +33,18 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
+  # Home endpoint
+
+def home(request):
+   return JsonResponse({
+      "message" : "Smart Task Manager API is running"
+   })
 
 urlpatterns = [
+    # Home endpoint
+    path('',home),
+
+    # Admin panel
     path('admin/', admin.site.urls),
 
     # App APIs
