@@ -52,7 +52,7 @@ if (signupForm) {
 
     } catch (error) {
       console.error("Signup error:", error);
-      errorMessage.textContent = error.message;
+      showError(error.message);
     }
   });
 }

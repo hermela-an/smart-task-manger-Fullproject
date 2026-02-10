@@ -52,5 +52,7 @@ loginForm.addEventListener("submit", async (e) => {
   } catch (error) {
     console.error("Login error:", error);
     errorMessage.textContent = error.message;
+    errorMessage.style.display = "block";
+    errorMessage.style.color = "red";
   }
 });
