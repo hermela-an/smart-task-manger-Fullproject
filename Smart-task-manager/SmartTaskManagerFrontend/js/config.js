@@ -27,5 +27,5 @@ function getAuthHeaders() {
 function logout() {
      localStorage.removeItem(TOKEN_KEY);
      localStorage.removeItem(USER_KEY);
-     window.location.href = "login.html";
+     window.location.href = "/login.html";
 }

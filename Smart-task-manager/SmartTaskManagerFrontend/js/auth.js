@@ -46,7 +46,7 @@ loginForm.addEventListener("submit", async (e) => {
     localStorage.setItem(REFRESH_TOKEN_KEY, data.refresh);
 
     // ✅ Redirect
-    window.location.href = "dashboard.html";
+    window.location.href = "/dashboard.html";
 
   } catch (error) {
     errorMessage.textContent = error.message;

@@ -8,7 +8,7 @@ const token = localStorage.getItem(TOKEN_KEY);
 
 // 🚨 Protect page
 if (!token) {
-    window.location.href = "login.html";
+    window.location.href = "/login.html";
 }
 
 form.addEventListener("submit", async function (e) {
@@ -49,7 +49,7 @@ form.addEventListener("submit", async function (e) {
 
             // Redirect
             setTimeout(() => {
-                window.location.href = "dashboard.html";
+                window.location.href = "/dashboard.html";
             }, 1000);
 
         } else {

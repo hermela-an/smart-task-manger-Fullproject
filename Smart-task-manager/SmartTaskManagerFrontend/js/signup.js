@@ -47,7 +47,7 @@ if (signupForm) {
       }
 
       // ✅ SUCCESS → redirect
-      window.location.href = "login.html";
+      window.location.href = "/login.html";
 
     } catch (error) {
       errorMessage.textContent = error.message;
@@ -58,4 +58,6 @@ function showError(msg) {
   if (!errorMessage) return;
   errorMessage.textContent = msg;
   errorMessage.style.display = "block";
+  errorMessage.style.color = "red";
+  errorMessage.style.marginTop = "10px";
 }

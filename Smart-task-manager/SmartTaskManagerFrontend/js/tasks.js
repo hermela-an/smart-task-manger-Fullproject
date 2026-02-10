@@ -2,7 +2,7 @@
 
 // ================= AUTH CHECK =================
 const accessToken = localStorage.getItem(TOKEN_KEY);
-if (!accessToken) window.location.href = "login.html";
+if (!accessToken) window.location.href = "/login.html";
 
 // ================= FEEDBACK HELPERS =================
 const showLoading = () => {
