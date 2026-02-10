@@ -33,16 +33,15 @@ schema_view = get_schema_view(
     public=True,
     permission_classes=(permissions.AllowAny,),
 )
-  # Home endpoint
+from django.shortcuts import render
 
+# Home view to serve the frontend
 def home(request):
-   return JsonResponse({
-      "message" : "Smart Task Manager API is running"
-   })
+    return render(request, 'login.html')
 
 urlpatterns = [
     # Home endpoint
-    path('',home),
+    path('', home),
 
     # Admin panel
     path('admin/', admin.site.urls),

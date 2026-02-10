@@ -4,7 +4,7 @@
 const BASE_URL = (
      window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
      ? "http://127.0.0.1:8000"   // Local backend 
-     : "https://smart-task-manger.onrender.com"; // Deployed backend
+     : ""; // Use relative paths in production for integrated deployment
 
 // 🔐 Token key name (used for localStorage) 
 const TOKEN_KEY = "smart_task_token";
