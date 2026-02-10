@@ -8,6 +8,7 @@ const errorMessage = document.getElementById("errorMessage");
 
 loginForm.addEventListener("submit", async (e) => {
   e.preventDefault();
+  console.log("Login form submitted");
 
   const username = document.getElementById("username").value.trim(); // SimpleJWT uses username
   const password = document.getElementById("password").value.trim();
@@ -49,6 +50,7 @@ loginForm.addEventListener("submit", async (e) => {
     window.location.href = "/dashboard.html";
 
   } catch (error) {
+    console.error("Login error:", error);
     errorMessage.textContent = error.message;
   }
 });

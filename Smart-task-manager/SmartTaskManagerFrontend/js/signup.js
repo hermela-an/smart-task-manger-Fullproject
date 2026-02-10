@@ -6,6 +6,7 @@ const errorMessage = document.getElementById("errorMessage");
 if (signupForm) {
   signupForm.addEventListener("submit", async (e) => {
     e.preventDefault();
+    console.log("Signup form submitted");
 
     const username = document.getElementById("username").value.trim();
     const email = document.getElementById("email").value.trim();
@@ -50,6 +51,7 @@ if (signupForm) {
       window.location.href = "/login.html";
 
     } catch (error) {
+      console.error("Signup error:", error);
       errorMessage.textContent = error.message;
     }
   });
