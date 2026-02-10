@@ -39,9 +39,22 @@ from django.shortcuts import render
 def home(request):
     return render(request, 'login.html')
 
+def signup(request):
+    return render(request, 'signup.html')
+
+def dashboard(request):
+    return render(request, 'dashboard.html')
+
+def add_task(request):
+    return render(request, 'add-task.html')
+
 urlpatterns = [
-    # Home endpoint
+    # Frontend Pages
     path('', home),
+    path('login.html', home),
+    path('signup.html', signup),
+    path('dashboard.html', dashboard),
+    path('add-task.html', add_task),
 
     # Admin panel
     path('admin/', admin.site.urls),
