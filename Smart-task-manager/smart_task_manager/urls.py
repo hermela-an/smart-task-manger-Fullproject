@@ -50,11 +50,11 @@ def add_task(request):
 
 urlpatterns = [
     # Frontend Pages
-    path('', home),
-    path('login.html', home),
-    path('signup.html', signup),
-    path('dashboard.html', dashboard),
-    path('add-task.html', add_task),
+    path('', home, name='home'),
+    path('login.html', home, name='login'),
+    path('signup.html', signup, name='signup'),
+    path('dashboard.html', dashboard, name='dashboard'),
+    path('add-task.html', add_task, name='add_task'),
 
     # Admin panel
     path('admin/', admin.site.urls),
