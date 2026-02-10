@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,8 +6,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart Task Manager | Login</title><!-- CSS Files -->
-    <link rel="stylesheet" href="/static/css/style.css">
-    <link rel="stylesheet" href="/static/css/auth.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/auth.css' %}">
 
 </head>
 
@@ -37,10 +38,10 @@
         <p class="error-message" id="errorMessage"></p>
     </div>
 
-    
+
 </body>
- <!-- JavaScript Files -->
-    <script src="/static/js/config.js"></script>
-    <script src="/static/js/auth.js"></script>
+<!-- JavaScript Files -->
+<script src="{% static 'js/config.js' %}"></script>
+<script src="{% static 'js/auth.js' %}"></script>
 
 </html>
