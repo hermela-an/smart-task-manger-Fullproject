@@ -70,7 +70,7 @@ ROOT_URLCONF = 'smart_task_manager.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'SmartTaskManagerFrontend'],
+        'DIRS': [BASE_DIR.parent / 'SmartTaskManagerFrontend'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -134,7 +134,7 @@ STATIC_URL = 'static/'
 STATIC_ROOT = BASE_DIR / 'staticfiles'
 
 STATICFILES_DIRS = [
-    BASE_DIR / 'SmartTaskManagerFrontend',
+    BASE_DIR.parent / 'SmartTaskManagerFrontend',
 ]
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
