@@ -1,0 +1,162 @@
+/* Auth Pages Styles (Login + Signup)
+   Enhanced with Hover, Transition & Responsive Design */
+
+* {
+  box-sizing: border-box;
+}
+
+/* ===== Page Background ===== */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4e73df, #1cc88a);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== Shared Auth Container ===== */
+.login-container,
+.auth-container {
+  background: #ffffff;
+  padding: 32px 28px;
+  width: 100%;
+  max-width: 380px;
+  border-radius: 14px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Fade Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Headings ===== */
+.login-container h1,
+.auth-container h2 {
+  margin-bottom: 6px;
+  color: #2c2c2c;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 22px;
+}
+
+/* ===== Form ===== */
+.form-group {
+  text-align: left;
+  margin-bottom: 16px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 13px;
+  color: #444;
+}
+
+/* Inputs (Login + Signup) */
+.form-group input,
+.auth-container input {
+  width: 100%;
+  padding: 11px 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 14px;
+}
+
+.form-group input:focus,
+.auth-container input:focus {
+  outline: none;
+  border-color: #4e73df;
+  box-shadow: 0 0 0 3px rgba(78, 115, 223, 0.15);
+}
+
+/* ===== Buttons ===== */
+.btn-login,
+.auth-container button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  background: linear-gradient(135deg, #4e73df, #375abf);
+  border: none;
+  color: white;
+  font-size: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease,
+              box-shadow 0.2s ease,
+              background 0.3s ease;
+}
+
+.btn-login:hover,
+.auth-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(135deg, #375abf, #2e4ea8);
+}
+
+.btn-login:active,
+.auth-container button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Error Message ===== */
+.error-message,
+#errorMessage {
+  color: #e74c3c;
+  font-size: 13px;
+  margin-top: 12px;
+  display: none;
+  text-align: center;
+}
+
+/* ===== Switch Login / Signup Link ===== */
+.switch {
+  margin-top: 16px;
+  font-size: 14px;
+}
+
+.switch a {
+  color: #4e73df;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.switch a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Mobile Responsiveness ===== */
+@media (max-width: 480px) {
+  .login-container,
+  .auth-container {
+    padding: 24px 20px;
+    border-radius: 12px;
+  }
+
+  .login-container h1,
+  .auth-container h2 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 13px;
+  }
+}

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Manager | Add Task</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css"> <!-- Reusing dashboard styles for consistency -->
+    <style>
+        .form-container {
+            max-width: 600px;
+            margin: 40px auto;
+            background: #fff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: inherit;
+            font-size: 14px;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            border-color: #4e73df;
+            outline: none;
+        }
+
+        .btn-submit {
+            background: linear-gradient(135deg, #4e73df, #224abe);
+            color: #fff;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            width: 100%;
+            transition: transform 0.2s;
+        }
+
+        .btn-submit:hover {
+            transform: translateY(-2px);
+        }
+
+        .back-link {
+            display: inline-block;
+            margin-top: 20px;
+            color: #555;
+            text-decoration: none;
+            padding: 10px 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            font-weight: 500;
+        }
+
+        .back-link:hover {
+            background: #f8f9fa;
+            border-color: #ccc;
+            color: #333;
+            transform: translateY(-1px);
+        }
+
+        /* Center the link container */
+        .back-link-container {
+            text-align: center;
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 480px) {
+            .form-container {
+                margin: 20px auto;
+                padding: 20px;
+            }
+
+            .btn-submit {
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="app-header">
+        <h2>Smart Task Manager</h2>
+    </header>
+
+    <main class="container">
+        <div class="form-container">
+            <h3>Add New Task</h3>
+            <p id="message"></p>
+
+            <form id="taskForm">
+                <div class="form-group">
+                    <label for="title">Title</label>
+                    <input type="text" id="title" placeholder="e.g. Complete Project Report" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea id="description" rows="4" placeholder="Task details..."></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="priority">Priority</label>
+                    <select id="priority">
+                        <option value="low">Low</option>
+                        <option value="medium" selected>Medium</option>
+                        <option value="high">High</option>
+                    </select>
+                </div>
+
+                <!-- Optional: Due Date if backend supports it -->
+                <div class="form-group">
+                    <label for="due_date">Due Date</label>
+                    <input type="date" id="due_date">
+                </div>
+
+                <button type="submit" class="btn-submit">Create Task</button>
+            </form>
+
+            <div class="back-link-container">
+                <a href="dashboard.html" class="back-link">← Back to Dashboard</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- JS -->
+    <script src="js/config.js"></script>
+    <script src="js/add-task.js"></script>
+
+</body>
+
+</html>

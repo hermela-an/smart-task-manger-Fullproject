@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Task Manager | Dashboard</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="app-header">
+        <h2>Smart Task Manager</h2>
+        <button class="logout-btn" onclick="logout()">Logout</button>
+    </header>
+
+    <!-- Main Content -->
+    <main class="container">
+
+        <!-- Statistics Section -->
+        <section class="stats-container" id="statsContainer">
+            <div class="stat-card">
+                <span class="stat-value" id="totalTasks">0</span>
+                <span class="stat-label">Total</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="pendingTasks">0</span>
+                <span class="stat-label">Pending</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-value" id="completedTasks">0</span>
+                <span class="stat-label">Done</span>
+            </div>
+        </section>
+
+        <!-- Smart Recommendation Section -->
+        <section class="smart-box" id="smartBox">
+            <h3>💡 Smart Recommendation</h3>
+            <p id="smartMessage">Loading recommendation...</p>
+        </section>
+
+        <!-- Task Actions & Filters -->
+        <div class="actions-row">
+            <div class="filters" id="taskFilters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="pending">Pending</button>
+                <button class="filter-btn" data-filter="completed">Completed</button>
+                <button class="filter-btn" data-filter="high">🔥 High</button>
+            </div>
+            <button class="add-task-btn" onclick="location.href='add-task.html'">
+                + Add Task
+            </button>
+        </div>
+
+        <!-- Loading Indicator -->
+        <div id="loadingIndicator" class="loading-spinner" style="display: none;">
+            <div class="spinner"></div>
+            <span>Fetching tasks...</span>
+        </div>
+
+        <!-- Task List -->
+        <section class="task-list" id="taskList">
+            <!-- Tasks injected dynamically -->
+        </section>
+
+    </main>
+
+    <!-- Toast Notifications -->
+    <div id="toastContainer" class="toast-container"></div>
+
+    <!-- JavaScript -->
+    <script src="js/config.js"></script>
+    <script src="js/tasks.js"></script>
+    <script src="js/smart.js"></script>
+
+
+</body>
+<script>
+    function logout() {
+        localStorage.removeItem(TOKEN_KEY);
+        window.location.href = "login.html";
+    }
+</script>
+
+</html>
