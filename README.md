@@ -3,6 +3,7 @@
 A full-stack productivity web application that helps users efficiently manage daily tasks, track progress, and receive intelligent recommendations for better productivity.
 
 🚀 Key Features
+
 ✅ Secure Authentication: JWT Token system with protected routes.
 ✅ Dashboard: Comprehensive overview of task statistics.
 ✅ Task Management (CRUD): Create, Read, Update, and Delete tasks with ease.
@@ -151,9 +152,6 @@ Delete tasks
 View all tasks
 
 
-
-
-
 ✅ Smart Recommendation System
 
 Provides motivational feedback when tasks are completed, improving user engagement.
@@ -162,40 +160,33 @@ Example:
 
 > "You are almost done — keep going!"
 
+✅ Email Reminder System
 
+Automatically sends email notifications for tasks due tomorrow
 
+Implemented using Django email backend + scheduled management command
 
+Helps users avoid missing important deadlines
 
 
 ✅ Secure API
 
 Protected routes ensure only authenticated users can manage tasks.
 
-
-
-
 ✅ Production Deployment
 
 Both frontend and backend are deployed — demonstrating real-world project readiness.
-
-
 
 
 💡 Future Improvements
 
 Planned enhancements include:
 
-📧 Email notifications for due tasks
-
-⏰ Deadline reminders
-
-📊 Task analytics dashboard
-
-🧠 AI-powered recommendations
-
-📱 Mobile-friendly UI upgrades
-
+📊 Advanced task analytics dashboard
+🧠 AI-powered productivity recommendations
+📱 Enhanced mobile UI/UX
 🐳 Docker containerization
+🔔 Real-time push notifications
 
 📸 Project Screenshots
 
