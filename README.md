@@ -1,4 +1,4 @@
-🚀 Smart Task Manager
+🎯 Smart Task Manager
 
 A full-stack productivity web application that helps users efficiently manage daily tasks, track progress, and receive intelligent recommendations for better productivity.
 
