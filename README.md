@@ -2,8 +2,13 @@
 
 A full-stack productivity web application that helps users efficiently manage daily tasks, track progress, and receive intelligent recommendations for better productivity.
 
-Built with a modern frontend and a secure Django REST backend, Smart Task Manager demonstrates real-world software engineering practices including authentication, API integration, and deployment.
-
+🚀 Key Features
+✅ Secure Authentication: JWT Token system with protected routes.
+✅ Dashboard: Comprehensive overview of task statistics.
+✅ Task Management (CRUD): Create, Read, Update, and Delete tasks with ease.
+✅ Smart Recommendations: Priority-based task suggestions considering due dates.
+✅ Email Reminders: Automated management command to notify users of tasks due tomorrow.
+✅ Environment Security: Sensitive data protected via .env files.
 
 
 🌐 Live Demo
@@ -28,29 +33,6 @@ Smart Task Manager allows users to:
 ✅ Work with a deployed cloud backend
 
 This project simulates a real-world SaaS productivity tool.
-
-
-
-
-🧠 Why I Built This Project
-
-As a Software Engineering student passionate about full-stack development, I built this project to strengthen my skills in:
-
-Frontend–Backend integration
-
-REST API design
-
-Authentication systems
-
-Deployment workflows
-
-Debugging production issues
-
-Writing clean, maintainable code
-
-
-
----
 
 🛠️ Tech Stack
 
@@ -215,20 +197,6 @@ Planned enhancements include:
 
 🐳 Docker containerization
 
-
-
-
-
-🎯 What This Project Demonstrates
-
-This project highlights my ability to:
-
-✅ Build a full-stack application from scratch
-✅ Design RESTful APIs
-✅ Implement authentication
-✅ Debug deployment issues
-✅ Manage Git repositories professionally
-✅ Structure scalable projects
 
 
 ⭐️ If You Like This Project
