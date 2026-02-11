@@ -21,6 +21,7 @@ if (loginForm) {
     }
 
     try {
+      console.log(`Fetching: ${BASE_URL}/api/users/login/`);
       const response = await fetch(`${BASE_URL}/api/users/login/`, {
         method: "POST",
         headers: {
@@ -29,7 +30,17 @@ if (loginForm) {
         body: JSON.stringify({ username, password })
       });
 
-      const data = await response.json();
+      console.log("Response status:", response.status);
+
+      const contentType = response.headers.get("content-type");
+      let data;
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error("Non-JSON response received:", text.substring(0, 200));
+        throw new Error(`Server returned ${response.status} ${response.statusText}. Please check logs.`);
+      }
 
       if (!response.ok) {
         let msg = data.detail || "Login failed";

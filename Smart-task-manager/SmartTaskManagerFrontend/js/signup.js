@@ -21,6 +21,7 @@ if (signupForm) {
     }
 
     try {
+      console.log(`Fetching: ${BASE_URL}/api/users/signup/`);
       const response = await fetch(`${BASE_URL}/api/users/signup/`, {
         method: "POST",
         headers: {
@@ -33,11 +34,20 @@ if (signupForm) {
         })
       });
 
-      if (!response.ok) {
-        const data = await response.json();
-        let msg = data.detail || "Signup failed";
+      console.log("Response status:", response.status);
 
-        // Handle field validation errors (e.g., {"username": ["Already taken"]})
+      const contentType = response.headers.get("content-type");
+      let data;
+      if (contentType && contentType.includes("application/json")) {
+        data = await response.json();
+      } else {
+        const text = await response.text();
+        console.error("Non-JSON response received:", text.substring(0, 200));
+        throw new Error(`Server returned ${response.status} ${response.statusText}. Please check logs.`);
+      }
+
+      if (!response.ok) {
+        let msg = data.detail || "Signup failed";
         if (!data.detail && typeof data === "object") {
           const errors = [];
           for (const key in data) {
@@ -46,7 +56,6 @@ if (signupForm) {
           }
           if (errors.length > 0) msg = errors.join("\n");
         }
-
         throw new Error(msg);
       }
 
