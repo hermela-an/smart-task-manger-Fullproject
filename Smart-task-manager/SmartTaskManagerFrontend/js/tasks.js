@@ -40,7 +40,7 @@ let currentFilter = "all";
 async function fetchTasks() {
   showLoading();
   try {
-    const response = await fetch(`${BASE_URL}/api/tasks/`, {
+    const response = await fetch(`${BASE_URL}/tasks/`, {
       headers: {
         "Content-Type": "application/json",
         "Authorization": `Bearer ${accessToken}`
@@ -161,7 +161,7 @@ document.addEventListener("click", async function (e) {
     if (window.updateRecommendation) window.updateRecommendation();
 
     try {
-      const response = await fetch(`${BASE_URL}/api/tasks/${taskId}/`, {
+      const response = await fetch(`${BASE_URL}/tasks/${taskId}/`, {
         method: "PATCH",
         headers: getAuthHeaders(),
         body: JSON.stringify({ completed: true })
@@ -185,7 +185,7 @@ document.addEventListener("click", async function (e) {
     const taskId = taskElement.dataset.id;
 
     try {
-      const response = await fetch(`${BASE_URL}/api/tasks/${taskId}/`, {
+      const response = await fetch(`${BASE_URL}/tasks/${taskId}/`, {
         method: "DELETE",
         headers: getAuthHeaders()
       });

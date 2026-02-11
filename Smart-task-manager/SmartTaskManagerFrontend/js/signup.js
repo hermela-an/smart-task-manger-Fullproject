@@ -21,8 +21,8 @@ if (signupForm) {
     }
 
     try {
-      console.log(`Fetching: ${BASE_URL}/api/users/signup/`);
-      const response = await fetch(`${BASE_URL}/api/users/signup/`, {
+      console.log(`Fetching: ${BASE_URL}/users/signup/`);
+      const response = await fetch(`${BASE_URL}/users/signup/`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"

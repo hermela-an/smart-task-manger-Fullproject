@@ -3,11 +3,8 @@
 // 🔗 Base URL of your backend API // 
 const BASE_URL = (
      window.location.hostname === "localhost" || window.location.hostname === "127.0.0.1")
-     ? "http://127.0.0.1:8000"   // Local backend 
-     : window.location.origin; // Dynamically use the current origin for integrated deployment
-
-// Ensure BASE_URL doesn't end with a slash if paths start with one, or vice versa
-// But wait, the JS uses `${BASE_URL}/api...` so origin is perfect as it usually doesn't have a trailing slash.
+     ? "http://127.0.0.1:8000/api"   // Local backend 
+     : window.location.origin + "/api"; // Production backend
 
 // 🔐 Token key name (used for localStorage) 
 const TOKEN_KEY = "smart_task_token";
