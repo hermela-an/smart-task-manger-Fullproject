@@ -191,6 +191,7 @@ Planned enhancements include:
 📸 Project Screenshots
 
 Signup page
+
 <img width="1804" height="967" alt="image" src="https://github.com/user-attachments/assets/07712e34-1498-4fa1-a242-c99c7caf7418" />
 
 Login page
@@ -198,6 +199,7 @@ Login page
 <img width="1857" height="1017" alt="image" src="https://github.com/user-attachments/assets/ec688c27-7ea9-4b08-bf84-6b2fa9485c02" />
 
 Dashbord page
+
 <img width="1883" height="1019" alt="image" src="https://github.com/user-attachments/assets/d70b2038-c68c-4a40-8ecf-a4e4ba3f657a" />
 
 Add Task
